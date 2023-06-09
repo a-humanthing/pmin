@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { tokenInstance } from "../../axios"
 import { toast, ToastContainer } from "react-toastify"
+import PageTitle from "../../components/utils/PageTitle"
 
 const Login = () => {
   const [username, setusername] = useState("")
@@ -16,9 +17,7 @@ const Login = () => {
       if (response.status === 200) {
         localStorage.setItem("pminToken", response.data.jwt_token)
         navigate("/")
-        setTimeout(() => {
-          toast.success("Login Successfull")
-        }, 1000)
+        toast.success("Login Successfull")
       } else {
         toast.error("Invalid Username or Password")
       }
@@ -29,6 +28,7 @@ const Login = () => {
   }
   return (
     <>
+      <PageTitle title="Login Page" />
       <ToastContainer position="top-right" />
       <div className="loginContainer min-vh-100">
         <div className="loginLeft">

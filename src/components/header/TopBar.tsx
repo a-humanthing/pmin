@@ -2,6 +2,7 @@ import { SlHandbag } from "react-icons/sl"
 import { AiOutlineLogout } from "react-icons/ai"
 import "./TopBar.css"
 import { Link, useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 
 const TopBar = () => {
   const navigate = useNavigate()
@@ -9,6 +10,7 @@ const TopBar = () => {
     try {
       localStorage.removeItem("pminToken")
       navigate("/login")
+      toast.success("Logout Successfull")
     } catch (error) {}
   }
   return (

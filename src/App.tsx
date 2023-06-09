@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route element={<PrivateRoutes />}>
             <Route path="/blog/:id" element={<Blog />} />
-            <Route path="/blog" element={<Home />} />
+            {/* <Route path="/blog" element={<Home />} /> */}
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
           </Route>

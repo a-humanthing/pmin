@@ -7,6 +7,7 @@ import Footer from "../../components/footer/Footer"
 import ImageFirstPair from "../../components/blogs/ImageFirstPair"
 import TextFirstPair from "../../components/blogs/TextFirstPair"
 import ListSkeleton from "../../components/utils/ListSkeleton"
+import PageTitle from "../../components/utils/PageTitle"
 
 const Home = () => {
   const [blogs, setBlogs] = useState([])
@@ -26,6 +27,7 @@ const Home = () => {
   }, [])
   return (
     <>
+      <PageTitle title="Blog Page" />
       <TopBar />
       <HeadBar text="Blog" />
       <div className="appContainer">

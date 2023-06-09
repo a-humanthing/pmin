@@ -2,10 +2,12 @@ import CommentBox from "../../components/comment/CommentBox"
 import Footer from "../../components/footer/Footer"
 import HeadBar from "../../components/header/HeadBar"
 import TopBar from "../../components/header/TopBar"
+import PageTitle from "../../components/utils/PageTitle"
 import "./Blog.css"
 const Blog = () => {
   return (
     <>
+      <PageTitle title="View Blog" />
       <TopBar />
       <HeadBar text="My daily skin care routine" />
       <div className="blogPageContainer">

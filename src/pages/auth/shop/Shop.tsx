@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import "./Shop.css"
 import { instance } from "../../../axios"
 import ListSkeleton from "../../../components/utils/ListSkeleton"
+import PageTitle from "../../../components/utils/PageTitle"
 
 const Shop = () => {
   const [products, setProducts] = useState([])
@@ -27,6 +28,7 @@ const Shop = () => {
       <div className="appContainer">
         <TopBar />
         <HeadBar text="Shop" />
+        <PageTitle title="Shop" />
         <div className="shopContainer">
           {products.length < 1 && <ListSkeleton listsToRender={8} />}
 
