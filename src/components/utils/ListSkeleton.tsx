@@ -9,7 +9,7 @@ const ListSkeleton: React.FC<list> = ({ listsToRender }) => {
     <>
       {Array(listsToRender)
         .fill(1)
-        .map((card, index) => (
+        .map((_card, index) => (
           <div className="product" key={index}>
             <Skeleton animation="wave" variant="rectangular" height={"100%"} />
           </div>

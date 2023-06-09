@@ -32,7 +32,7 @@ const Home = () => {
         <div className="homeContainer">
           {blogs.length < 1 && <ListSkeleton listsToRender={12} />}
           {blogs
-            .filter((item: any, index) => index < 2)
+            .filter((_item: any, index) => index < 2)
             .map((item: any) => {
               return (
                 <>
@@ -45,7 +45,7 @@ const Home = () => {
               )
             })}
           {blogs
-            .filter((item: any, index) => index < 4 && index > 1)
+            .filter((_item: any, index) => index < 4 && index > 1)
             .map((item: any) => {
               return (
                 <>
@@ -58,7 +58,7 @@ const Home = () => {
               )
             })}
           {blogs
-            .filter((item: any, index) => index < 6 && index > 3)
+            .filter((_item: any, index) => index < 6 && index > 3)
             .map((item: any) => {
               return (
                 <>
