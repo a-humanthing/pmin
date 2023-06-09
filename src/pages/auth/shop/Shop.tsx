@@ -4,9 +4,13 @@ import TopBar from "../../../components/header/TopBar"
 import { useState, useEffect } from "react"
 import "./Shop.css"
 import { instance } from "../../../axios"
+import { Skeleton } from "@mui/material"
+import ListSkeleton from "../../../components/utils/ListSkeleton"
 
 const Shop = () => {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [array, setarray] = useState([1, 2, 3, 4, 5, , 6, 7, 8])
   const token = localStorage.getItem("pminToken")
   const headers = { authorization: `Bearer ${token}` }
   const fetchBlogs = async () => {
@@ -19,7 +23,9 @@ const Shop = () => {
     }
   }
   useEffect(() => {
+    setLoading(true)
     fetchBlogs()
+    setLoading(false)
   }, [])
   return (
     <>
@@ -27,6 +33,8 @@ const Shop = () => {
         <TopBar />
         <HeadBar text="Shop" />
         <div className="shopContainer">
+          {products.length < 1 && <ListSkeleton listsToRender={8} />}
+
           {products.map((item: any) => {
             return (
               <div className="product">

@@ -1,14 +1,8 @@
 import { BsReply } from "react-icons/bs"
-type CommentObject = {
+type commentType = {
   comment: string
-  reply?: {
-    comment: string
-  }
 }
-type CommentComponentProps = {
-  commentObj: CommentObject
-}
-const CommentItem: React.FC<CommentComponentProps> = ({ commentObj }) => {
+const CommentItem: React.FC<commentType> = ({ comment }) => {
   return (
     <>
       <div className="commentItemContainer">
@@ -22,7 +16,7 @@ const CommentItem: React.FC<CommentComponentProps> = ({ commentObj }) => {
           <span className="timeStatus">1 hour ago</span>
         </div>
         <div className="comment">
-          <span className="commentText">{commentObj.comment}</span>
+          <span className="commentText">{comment}</span>
         </div>
         <div className="reply">
           <span className="replyIcon">

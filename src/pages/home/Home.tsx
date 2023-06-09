@@ -6,6 +6,7 @@ import { instance } from "../../axios"
 import Footer from "../../components/footer/Footer"
 import ImageFirstPair from "../../components/blogs/ImageFirstPair"
 import TextFirstPair from "../../components/blogs/TextFirstPair"
+import ListSkeleton from "../../components/utils/ListSkeleton"
 
 const Home = () => {
   const [blogs, setBlogs] = useState([])
@@ -25,10 +26,11 @@ const Home = () => {
   }, [])
   return (
     <>
+      <TopBar />
+      <HeadBar text="Blog" />
       <div className="appContainer">
-        <TopBar />
-        <HeadBar text="Blog" />
         <div className="homeContainer">
+          {blogs.length < 1 && <ListSkeleton listsToRender={12} />}
           {blogs
             .filter((item: any, index) => index < 2)
             .map((item: any) => {

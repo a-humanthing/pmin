@@ -12,6 +12,7 @@
   width: 100%;
   border-radius: 1em;
   padding: 0.5em;
+  color: white;
 }
 .commentButton {
   border: 1px solid var(--fontPrimary);

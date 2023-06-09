@@ -3,25 +3,14 @@ import CommentItem from "./CommentItem"
 import { useState } from "react"
 import ReplyComment from "./ReplyComment"
 const CommentBox = () => {
-  type CommentObject = {
-    comment: string
-    reply?: {
-      comment: string
-    }
-  }
-  const data: Array<CommentObject> = [
-    {
-      comment:
-        "Hi Orlando Diggs , let's meet today. I want to tell you about my ideas. May",
-      reply: { comment: "this is reply" },
-    },
-    { comment: "superb !", reply: { comment: "this is reply" } },
-    { comment: "Awesome Post", reply: { comment: "this is reply" } },
+  const data: Array<string> = [
+    "Hi Orlando Diggs , let's meet today. I want to tell you about my ideas. May",
+    "Awesome Post",
   ]
   const [comments, setComments] = useState(data)
   const [newcomment, setNewcomment] = useState("")
   const handleComment = async () => {
-    setComments([...comments, { newcomment }])
+    setComments([newcomment, ...comments])
     setNewcomment("")
   }
   return (
@@ -41,9 +30,10 @@ const CommentBox = () => {
           POST A COMMENT
         </button>
         {comments.map((item) => {
-          return <CommentItem commentObj={item} />
+          return <CommentItem comment={item} />
         })}
-        <ReplyComment comment="reply" />
+        <ReplyComment comment="reply this" />
+        <CommentItem comment="Good Day!" />
       </div>
     </>
   )
