@@ -1,0 +1,50 @@
+.commentContainer {
+  background-color: var(--bgPrimary);
+  padding: 5em;
+  border: 1px solid transparent;
+  border-radius: 1em;
+}
+.commentField {
+  background-color: inherit;
+  border: 1px solid var(--fontPrimary);
+  accent-color: var(--fontPrimary);
+  outline: var(--fontPrimary);
+  width: 100%;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+.commentButton {
+  border: 1px solid var(--fontPrimary);
+  border-radius: 1em;
+  background-color: var(--bgPrimary);
+  color: var(--fontPrimary);
+  padding: 6px 1em;
+  margin: 1em 0;
+}
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em 0;
+  color: var(--fontPrimary);
+}
+.timeStatus {
+  opacity: 0.5;
+  font-weight: 300;
+}
+.commentText {
+  color: var(--fontPrimary);
+  font-weight: 200;
+}
+.replyIcon {
+  color: var(--fontPrimary);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.reply {
+  margin: 1em 0;
+}
+.replyContiner {
+  margin-left: 3em;
+}

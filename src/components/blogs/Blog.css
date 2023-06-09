@@ -1,0 +1,30 @@
+.square {
+  background-color: var(--bgPrimary);
+  aspect-ratio: 1;
+  position: relative;
+  font-family: "DM Serif Display", serif;
+}
+.blogImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blogSquareText {
+  color: var(--fontPrimary);
+}
+.sqaurefont {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.smallFont {
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--fontPrimary);
+}
+.blogSquareText {
+  font-weight: 500;
+  font-size: 20px;
+}

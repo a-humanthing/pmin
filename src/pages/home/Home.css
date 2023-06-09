@@ -1,0 +1,20 @@
+.homeContainer {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .homeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .homeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

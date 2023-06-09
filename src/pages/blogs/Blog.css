@@ -1,0 +1,20 @@
+.blogPageContainer {
+  background-color: var(--fontPrimary);
+  padding: 3em 5em;
+}
+.blogHero {
+  border: 1px solid transparent;
+  border-radius: 1em;
+}
+.detailingSection {
+  color: var(--bgPrimary);
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.detailingText {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

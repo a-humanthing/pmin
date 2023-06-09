@@ -1,0 +1,27 @@
+.shopContainer {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.product {
+  background-color: var(--fontPrimary);
+  aspect-ratio: 1;
+  border: 1px solid var(--bgPrimaryFade);
+  position: relative;
+}
+.shopImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.textOnImage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+  bottom: 10px;
+  left: 30px;
+}
+.shopTitle {
+  color: var(--bgPrimary);
+}

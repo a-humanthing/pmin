@@ -1,0 +1,18 @@
+:root {
+  --bgPrimary: #842a3a;
+  --bgPrimaryFade: #842a3b5d;
+  --fontPrimary: #fdf2db;
+}
+body {
+  font-family: "Source Code Pro", monospace;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.appContainer {
+  background-color: var(--fontPrimary);
+}
+.primeFont {
+  color: var(--fontPrimary);
+}

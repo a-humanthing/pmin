@@ -1,0 +1,33 @@
+.topBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: var(--fontPrimary);
+}
+.topBarIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--bgPrimary);
+  font-weight: 500;
+}
+.headBarContainer {
+  background-color: var(--bgPrimary);
+  color: var(--fontPrimary);
+  padding: 0.5em 1.5em;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: "DM Serif Display", serif;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.topBarIcon {
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .topBarContainer {
+    padding: 1em 5px;
+  }
+}
